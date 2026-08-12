@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i,j,n,s,l;
+	    Scanner sc=new Scanner(System.in);
+	    n=sc.nextInt();
+	    int[] arr=new int[n];
+	    for(i=0;i<n;i++)
+	    {
+	        arr[i]=sc.nextInt();
+	    }
+	    for(i=0;i<n;i++)
+	    {
+	        for(j=i+1;j<n;j++)
+	        {
+	            if(arr[j]<arr[i])
+	            {
+	                s=arr[i];
+	                arr[i]=arr[j];
+	                arr[j]=s;
+	            }
+	        }
+	    }
+		System.out.println(arr[n-2]);
+	}
+}
